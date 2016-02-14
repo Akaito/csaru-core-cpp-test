@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 
+set(src_files
+	src/main.cpp
+	)
+
 # CSaruDir must be set in your environment variables!  It should point to a
 #	directory with src/bin/pkg directories (or at least src; others can be
 #	created later).  Open CSaru.cmake in a text editor to see what it's doing.
@@ -7,7 +11,7 @@ cmake_minimum_required(VERSION 3.2)
 #	file if you need finer control over your project.
 include($ENV{CSaruDir}/cmake/CSaru.cmake)
 # Pass the version of your project; it's not related to the CSaruEnviron.
-CSaru_Bin_Console(1.5)
+CSaru_Bin_Console(1.5 "${src_files}")
 
 # Custom stuff hand-edited into this CMakeLists ...
 
