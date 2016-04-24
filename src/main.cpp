@@ -1,11 +1,12 @@
 #include <cstdio>
 
-#include <csaru-core-cpp/csaru-core-cpp.h> // ref()
+#include <csaru-core-cpp/csaru-core-cpp.h> // unused()
+#include <csaru-core-cpp/csaru-core-cpp.h> // test double-include
 
 int main (int argc, char ** argv) {
 
-    ref(argc);
-    ref(argv);
+    unused(argc);
+    unused(argv);
 
     std::size_t tempSt = CSaruCore::GetSystemPageSize();
     std::printf("System page size is {" PF_SIZE_T "} bytes.\n", tempSt);
@@ -15,6 +16,9 @@ int main (int argc, char ** argv) {
 
     std::printf("Beep!\n");
     CSaruCore::Beep();
+
+	std::printf("sizeof(int): {" PF_SIZE_T "}\n", sizeof(int));
+	std::printf("sizeof(uint64_t): {" PF_SIZE_T "}\n", sizeof(uint64_t));
 
     return 0;
 
