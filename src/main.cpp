@@ -1,7 +1,7 @@
 #include <cstdio>
 
-#include <csaru-core-cpp/csaru-core-cpp.h> // unused()
-#include <csaru-core-cpp/csaru-core-cpp.h> // test double-include
+#include <csaru-core-cpp/csaru-core-cpp.hpp> // unused()
+#include <csaru-core-cpp/csaru-core-cpp.hpp> // test double-include
 
 int main (int argc, char ** argv) {
 
@@ -19,6 +19,7 @@ int main (int argc, char ** argv) {
 
 	std::printf("sizeof(int): {" PF_SIZE_T "}\n", sizeof(int));
 	std::printf("sizeof(uint64_t): {" PF_SIZE_T "}\n", sizeof(uint64_t));
+	std::printf("sizeof(void *): {" PF_SIZE_T "}\n", sizeof(void *));
 
     return 0;
 
